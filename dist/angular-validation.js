@@ -786,7 +786,7 @@ angular.module('validation.directive', ['validation.provider']);
             }
           };
 
-          if (isValid.constructor === Object) isValid.then(setFocus);
+          if (isValid && (isValid.constructor === Object)) isValid.then(setFocus);
           else setFocus(isValid);
         });
 
